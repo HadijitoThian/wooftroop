@@ -214,7 +214,7 @@
 
       <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-800">
         <a href="#kategori" class="hover:text-forest-600 transition">Kategori</a>
-        <a href="#brand" class="hover:text-forest-600 transition">Brand</a>
+        <a href="#layanan" class="hover:text-forest-600 transition">Grooming & Hotel</a>
         <a href="#quiz" class="hover:text-forest-600 transition">Rekomendasi</a>
         <a href="#chatbot" class="hover:text-forest-600 transition">AI Assistant</a>
         <a href="#tentang" class="hover:text-forest-600 transition">Tentang Kami</a>
@@ -753,6 +753,130 @@
             <div>
               <div class="font-semibold text-ink-900 text-sm">Sarah Wijaya</div>
               <div class="text-xs text-ink-500">Denpasar · Pet parent Luna 🐕</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grooming & Pet Hotel Services -->
+  <section id="layanan" class="py-24 bg-cream-200/40 relative overflow-hidden">
+    <div class="absolute inset-0 paw-pattern opacity-40"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+      <div class="grid lg:grid-cols-5 gap-12 items-start">
+        <div class="lg:col-span-2 reveal lg:sticky lg:top-28">
+          <div class="inline-flex items-center gap-2 bg-forest-100 text-forest-700 px-4 py-1.5 rounded-full text-xs font-semibold mb-5">
+            <span class="w-2 h-2 rounded-full bg-forest-500 animate-pulse"></span>
+            Free Pickup Area Jakarta Barat
+          </div>
+          <h2 class="headline text-4xl sm:text-5xl font-bold text-forest-800 mb-5">
+            Grooming & <br><span class="italic gradient-text">Pet Hotel</span> <br>dengan Layanan Jemput.
+          </h2>
+          <p class="text-ink-600 text-lg mb-6 leading-relaxed">
+            Tim profesional kami menjemput anabul Anda dari rumah, memberikan perawatan penuh cinta, lalu mengantarnya kembali dengan aman.
+          </p>
+          <ul class="space-y-3 mb-8 text-sm">
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-forest-100 text-forest-700 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</div>
+              <span><b>Gratis pickup & antar</b> untuk area Jakarta Barat</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-forest-100 text-forest-700 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</div>
+              <span><b>Groomer berpengalaman</b> dengan produk premium</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-forest-100 text-forest-700 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</div>
+              <span><b>Kandang bersih & AC</b> untuk pet hotel</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-forest-100 text-forest-700 flex items-center justify-center text-xs flex-shrink-0 mt-0.5">✓</div>
+              <span><b>Booking via AI Poppy</b> — cepat & mudah 24/7</span>
+            </li>
+          </ul>
+          <button @click="$dispatch('open-chat', {prompt: 'Halo Poppy, saya mau booking layanan grooming/pet hotel'})" class="btn-clay inline-flex items-center gap-2 px-7 py-4 rounded-full font-semibold">
+            Book Sekarang via Poppy
+            <span>→</span>
+          </button>
+          <p class="text-xs text-ink-500 mt-3">Jam operasional pickup: Senin - Sabtu, 09.00 - 17.00 WIB</p>
+        </div>
+
+        <div class="lg:col-span-3 space-y-4">
+          <!-- Grooming card -->
+          <div class="card-hover bg-cream-100 rounded-3xl p-6 border border-forest-100 reveal">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-forest-100 flex items-center justify-center text-2xl">🛁</div>
+              <div>
+                <h3 class="font-serif text-xl font-bold text-forest-800">Grooming & Spa</h3>
+                <p class="text-xs text-ink-500">Untuk anjing & kucing segala ukuran</p>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-3">
+              <div class="p-4 rounded-2xl bg-cream-200/60">
+                <div class="text-xs text-clay-600 font-semibold mb-1">Basic</div>
+                <div class="font-serif font-bold text-forest-800 mb-1">Grooming</div>
+                <p class="text-[11px] text-ink-500 mb-3 leading-relaxed">Mandi, potong kuku, telinga, blow dry</p>
+                <div class="font-bold text-forest-700">Rp 100.000</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-forest-600 text-cream-100">
+                <div class="text-xs opacity-80 font-semibold mb-1">Premium</div>
+                <div class="font-serif font-bold mb-1">Styling + Haircut</div>
+                <p class="text-[11px] opacity-80 mb-3 leading-relaxed">Tambahan di atas grooming basic</p>
+                <div class="font-bold">+ Rp 150.000</div>
+              </div>
+              <div class="p-4 rounded-2xl bg-cream-200/60">
+                <div class="text-xs text-clay-600 font-semibold mb-1">Sehat</div>
+                <div class="font-serif font-bold text-forest-800 mb-1">Swimming</div>
+                <p class="text-[11px] text-ink-500 mb-3 leading-relaxed">Berenang di kolam khusus hewan</p>
+                <div class="font-bold text-forest-700">Rp 100.000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pet Hotel card -->
+          <div class="card-hover bg-cream-100 rounded-3xl p-6 border border-forest-100 reveal" style="transition-delay:0.1s">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-2xl bg-clay-100 flex items-center justify-center text-2xl">🏨</div>
+              <div>
+                <h3 class="font-serif text-xl font-bold text-forest-800">Pet Hotel</h3>
+                <p class="text-xs text-ink-500">Tempat menginap nyaman & aman untuk anabul</p>
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-3 gap-3">
+              <div class="p-4 rounded-2xl bg-cream-200/60 relative">
+                <div class="absolute top-3 right-3 text-2xl">🐾</div>
+                <div class="text-xs text-clay-600 font-semibold mb-1">Small</div>
+                <div class="font-serif font-bold text-forest-800 mb-1">&lt; 10 kg</div>
+                <p class="text-[11px] text-ink-500 mb-3">Kucing, anjing kecil</p>
+                <div class="font-bold text-forest-700">Rp 100.000 <span class="text-xs font-normal opacity-70">/ hari</span></div>
+              </div>
+              <div class="p-4 rounded-2xl bg-cream-200/60 relative">
+                <div class="absolute top-3 right-3 text-2xl">🐾</div>
+                <div class="text-xs text-clay-600 font-semibold mb-1">Medium</div>
+                <div class="font-serif font-bold text-forest-800 mb-1">10 - 25 kg</div>
+                <p class="text-[11px] text-ink-500 mb-3">Anjing menengah</p>
+                <div class="font-bold text-forest-700">Rp 130.000 <span class="text-xs font-normal opacity-70">/ hari</span></div>
+              </div>
+              <div class="p-4 rounded-2xl bg-forest-800 text-cream-100 relative">
+                <div class="absolute top-3 right-3 text-2xl">🐾</div>
+                <div class="text-xs opacity-80 font-semibold mb-1">Large</div>
+                <div class="font-serif font-bold mb-1">&gt; 25 kg</div>
+                <p class="text-[11px] opacity-70 mb-3">Golden, Husky, dll</p>
+                <div class="font-bold">Rp 175.000 <span class="text-xs font-normal opacity-70">/ hari</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Combo suggestion -->
+          <div class="reveal card-hover bg-gradient-to-br from-clay-500 to-clay-600 text-cream-100 rounded-3xl p-6 flex items-center gap-5" style="transition-delay:0.2s">
+            <div class="text-4xl">✨</div>
+            <div class="flex-1">
+              <h4 class="font-serif text-xl font-bold mb-1">Paket Full Spa Day</h4>
+              <p class="text-sm opacity-90">Grooming + Styling + Haircut + Swimming — hari spa lengkap untuk anabul kesayangan</p>
+            </div>
+            <div class="text-right hidden sm:block">
+              <div class="text-xs opacity-80">Mulai dari</div>
+              <div class="font-serif font-bold text-2xl">Rp 350rb</div>
             </div>
           </div>
         </div>
