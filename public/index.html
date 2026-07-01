@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Global ID — Karena Sahabat Terbaik Layak Mendapat yang Terbaik</title>
+  <meta name="description" content="Toko perlengkapan hewan peliharaan premium di Indonesia. 60+ brand pilihan, konsultasi gratis, AI Assistant 24/7, pengiriman se-Indonesia." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🐾%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.13.5/dist/cdn.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FFFBF5',
+              100: '#FFF8F0',
+              200: '#FDF1E3',
+              300: '#F9E5CD',
+            },
+            forest: {
+              50: '#F0F5F1',
+              100: '#DCEADE',
+              200: '#B5D0B9',
+              400: '#5D8A66',
+              500: '#3F7048',
+              600: '#2C5F3F',
+              700: '#234A31',
+              800: '#1B3A26',
+              900: '#122818',
+            },
+            clay: {
+              50: '#FDF4EF',
+              100: '#FAE3D5',
+              200: '#F3C5A9',
+              400: '#E29372',
+              500: '#D97757',
+              600: '#C55E3E',
+              700: '#A24A30',
+            },
+            ink: {
+              900: '#1F2937',
+              800: '#374151',
+              600: '#4B5563',
+              500: '#6B7280',
+            }
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.7s ease-out both',
+            'fade-in': 'fadeIn 0.9s ease-out both',
+            'float': 'float 5s ease-in-out infinite',
+            'bounce-soft': 'bounceSoft 2s ease-in-out infinite',
+            'pulse-ring': 'pulseRing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: 0, transform: 'translateY(24px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-14px)' },
+            },
+            bounceSoft: {
+              '0%, 100%': { transform: 'translateY(0) scale(1)' },
+              '50%': { transform: 'translateY(-4px) scale(1.03)' },
+            },
+            pulseRing: {
+              '0%': { transform: 'scale(0.85)', opacity: 0.7 },
+              '100%': { transform: 'scale(1.6)', opacity: 0 },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #FFF8F0;
+      color: #1F2937;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-serif { font-family: 'Fraunces', Georgia, serif; }
+    .headline {
+      font-family: 'Fraunces', Georgia, serif;
+      font-optical-sizing: auto;
+      font-variation-settings: 'opsz' 144;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+    }
+    .grain {
+      background-image: radial-gradient(circle at 1px 1px, rgba(44,95,63,0.06) 1px, transparent 0);
+      background-size: 24px 24px;
+    }
+    .paw-pattern {
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(217,119,87,0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(44,95,63,0.08) 0%, transparent 40%);
+    }
+    .btn-primary {
+      background: #2C5F3F;
+      color: #FFF8F0;
+      transition: all 0.25s ease;
+    }
+    .btn-primary:hover {
+      background: #234A31;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -8px rgba(44,95,63,0.4);
+    }
+    .btn-clay {
+      background: #D97757;
+      color: #FFF8F0;
+      transition: all 0.25s ease;
+    }
+    .btn-clay:hover {
+      background: #C55E3E;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -8px rgba(217,119,87,0.45);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: #2C5F3F;
+      border: 1.5px solid #2C5F3F;
+      transition: all 0.25s ease;
+    }
+    .btn-ghost:hover {
+      background: #2C5F3F;
+      color: #FFF8F0;
+    }
+    .card-hover {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px -18px rgba(44,95,63,0.25);
+    }
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .marquee {
+      display: flex;
+      animation: marquee 32s linear infinite;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .chat-scroll::-webkit-scrollbar { width: 6px; }
+    .chat-scroll::-webkit-scrollbar-track { background: transparent; }
+    .chat-scroll::-webkit-scrollbar-thumb { background: rgba(44,95,63,0.2); border-radius: 3px; }
+    .typing-dot {
+      width: 6px; height: 6px; background: #2C5F3F; border-radius: 50%;
+      display: inline-block; margin: 0 2px;
+      animation: typingBounce 1.4s ease-in-out infinite both;
+    }
+    .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+    .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+    @keyframes typingBounce {
+      0%, 80%, 100% { transform: scale(0.7); opacity: 0.5; }
+      40% { transform: scale(1); opacity: 1; }
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #2C5F3F 0%, #D97757 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .noise::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.15'/%3E%3C/svg%3E");
+      opacity: 0.4; pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-cream-100">
+
+  <!-- Announcement bar -->
+  <div x-data="{show:true}" x-show="show" class="bg-forest-600 text-cream-100 text-sm">
+    <div class="max-w-7xl mx-auto px-4 py-2.5 flex items-center justify-center gap-3">
+      <span class="hidden sm:inline">🎉</span>
+      <p class="text-center">Konsultasi <b>GRATIS</b> untuk pemilik hewan baru — chat AI Assistant kami sekarang!</p>
+      <button @click="show=false" class="ml-2 opacity-70 hover:opacity-100" aria-label="Close">✕</button>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="sticky top-0 z-40 bg-cream-100/85 backdrop-blur-lg border-b border-forest-100/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-xl bg-forest-600 flex items-center justify-center text-cream-100 text-xl group-hover:scale-110 transition-transform">🐾</div>
+        <div class="leading-none">
+          <div class="font-serif font-bold text-forest-700 text-xl">Pet Global ID</div>
+          <div class="text-[10px] tracking-wider text-ink-500 uppercase">by WoofTroop</div>
+        </div>
+      </a>
+
+      <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink-800">
+        <a href="#kategori" class="hover:text-forest-600 transition">Kategori</a>
+        <a href="#brand" class="hover:text-forest-600 transition">Brand</a>
+        <a href="#quiz" class="hover:text-forest-600 transition">Rekomendasi</a>
+        <a href="#chatbot" class="hover:text-forest-600 transition">AI Assistant</a>
+        <a href="#tentang" class="hover:text-forest-600 transition">Tentang Kami</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/6285186888233" target="_blank" rel="noopener" class="hidden sm:inline-flex btn-clay px-5 py-2.5 rounded-full text-sm font-semibold items-center gap-2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.48-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.71.23 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12 22c-1.66 0-3.29-.42-4.72-1.22L2 22l1.29-4.9C2.44 15.6 2 13.83 2 12 2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></svg>
+          Chat WhatsApp
+        </a>
+        <button @click="$dispatch('open-chat')" class="w-11 h-11 rounded-full bg-forest-600 hover:bg-forest-700 text-cream-100 flex items-center justify-center text-lg transition lg:hidden">
+          💬
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden paw-pattern">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-24 lg:pt-24 lg:pb-32 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="animate-fade-up">
+        <div class="inline-flex items-center gap-2 bg-clay-100 text-clay-700 px-4 py-1.5 rounded-full text-xs font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-clay-500 animate-pulse"></span>
+          Melayani 10,000+ pet parents di Indonesia
+        </div>
+
+        <h1 class="headline text-5xl sm:text-6xl lg:text-7xl font-bold text-forest-800 mb-6">
+          Sahabat Terbaik <br>Layak Mendapat <br><span class="italic gradient-text">yang Terbaik.</span>
+        </h1>
+
+        <p class="text-lg text-ink-600 mb-8 max-w-lg leading-relaxed">
+          Makanan premium, snack sehat, dan perawatan lengkap dari <b class="text-forest-700">60+ brand pilihan dunia</b> — dikurasi dengan cinta untuk anabul kesayangan Anda.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 mb-10">
+          <a href="#kategori" class="btn-primary inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full font-semibold text-base">
+            Belanja Sekarang
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <button @click="$dispatch('open-chat')" class="btn-ghost inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full font-semibold text-base">
+            <span class="text-lg">🤖</span>
+            Chat dengan AI Poppy
+          </button>
+        </div>
+
+        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-forest-100">
+          <div>
+            <div class="font-serif text-3xl font-bold text-forest-700">60+</div>
+            <div class="text-xs text-ink-500 mt-1">Brand Premium</div>
+          </div>
+          <div>
+            <div class="font-serif text-3xl font-bold text-forest-700">24/7</div>
+            <div class="text-xs text-ink-500 mt-1">AI Assistant</div>
+          </div>
+          <div>
+            <div class="font-serif text-3xl font-bold text-forest-700">4.9★</div>
+            <div class="text-xs text-ink-500 mt-1">Rating Pelanggan</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative animate-fade-in">
+        <div class="relative aspect-square max-w-lg mx-auto">
+          <!-- Main image -->
+          <div class="absolute inset-0 rounded-[3rem] overflow-hidden shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=800&q=80&auto=format&fit=crop"
+              alt="Anjing bahagia"
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Floating badges -->
+          <div class="absolute -top-4 -left-4 bg-cream-100 rounded-2xl shadow-xl p-4 flex items-center gap-3 animate-float">
+            <div class="w-12 h-12 rounded-full bg-clay-100 flex items-center justify-center text-2xl">✨</div>
+            <div>
+              <div class="text-xs text-ink-500">Brand Kurasi</div>
+              <div class="font-bold text-forest-700 text-sm">Pureluxe, Monge, Kit Cat</div>
+            </div>
+          </div>
+
+          <div class="absolute -bottom-4 -right-4 bg-forest-600 text-cream-100 rounded-2xl shadow-xl p-4 flex items-center gap-3 animate-float" style="animation-delay: -2.5s;">
+            <div class="w-12 h-12 rounded-full bg-cream-100/20 flex items-center justify-center text-2xl">🚚</div>
+            <div>
+              <div class="text-xs opacity-80">Pengiriman</div>
+              <div class="font-bold text-sm">Se-Indonesia</div>
+            </div>
+          </div>
+
+          <div class="absolute top-1/2 -right-8 bg-cream-100 rounded-full shadow-xl px-4 py-2 flex items-center gap-2 animate-bounce-soft">
+            <span class="text-lg">💚</span>
+            <span class="text-xs font-semibold text-forest-700">Bebas Ongkir 100k+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative curve -->
+    <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-cream-100"></div>
+  </section>
+
+  <!-- Brand marquee -->
+  <section id="brand" class="py-14 bg-cream-200/60 border-y border-forest-100">
+    <div class="max-w-7xl mx-auto px-4 mb-8 text-center">
+      <p class="text-xs tracking-[0.3em] uppercase text-ink-500 font-semibold">Dipercaya oleh brand hewan peliharaan terbaik dunia</p>
+    </div>
+    <div class="overflow-hidden">
+      <div class="marquee whitespace-nowrap">
+        <div class="flex items-center gap-16 px-8 font-serif text-2xl font-semibold text-forest-700/70">
+          <span>Pureluxe</span><span>·</span>
+          <span>Kit Cat</span><span>·</span>
+          <span>Monge</span><span>·</span>
+          <span>NexGard</span><span>·</span>
+          <span>Oxbow</span><span>·</span>
+          <span>Doggyman</span><span>·</span>
+          <span>1st Choice</span><span>·</span>
+          <span>Diyouke</span><span>·</span>
+          <span>Araton</span><span>·</span>
+          <span>Royal Canin</span><span>·</span>
+          <span>Hill's</span><span>·</span>
+        </div>
+        <div class="flex items-center gap-16 px-8 font-serif text-2xl font-semibold text-forest-700/70" aria-hidden="true">
+          <span>Pureluxe</span><span>·</span>
+          <span>Kit Cat</span><span>·</span>
+          <span>Monge</span><span>·</span>
+          <span>NexGard</span><span>·</span>
+          <span>Oxbow</span><span>·</span>
+          <span>Doggyman</span><span>·</span>
+          <span>1st Choice</span><span>·</span>
+          <span>Diyouke</span><span>·</span>
+          <span>Araton</span><span>·</span>
+          <span>Royal Canin</span><span>·</span>
+          <span>Hill's</span><span>·</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="kategori" class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="max-w-2xl mb-14 reveal">
+        <div class="text-xs tracking-[0.3em] uppercase text-clay-600 font-semibold mb-3">Jelajahi Koleksi</div>
+        <h2 class="headline text-4xl sm:text-5xl font-bold text-forest-800 mb-4">
+          Semua kebutuhan anabul,<br>di satu tempat.
+        </h2>
+        <p class="text-ink-600 text-lg">Dari makanan harian hingga perawatan khusus — kami memilih hanya produk terbaik untuk sahabat kecil Anda.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <a href="#" class="card-hover group relative overflow-hidden rounded-3xl bg-forest-600 text-cream-100 aspect-[4/5] reveal">
+          <img src="https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=600&q=80&auto=format&fit=crop" alt="Dry Food" class="absolute inset-0 w-full h-full object-cover opacity-45 group-hover:opacity-60 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-forest-800 via-forest-800/40 to-transparent"></div>
+          <div class="relative p-6 h-full flex flex-col justify-end">
+            <div class="text-xs tracking-widest uppercase opacity-70 mb-1">Best Seller</div>
+            <h3 class="font-serif text-3xl font-bold mb-1">Makanan Kering</h3>
+            <p class="text-sm opacity-80 mb-4">120+ pilihan premium</p>
+            <div class="inline-flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
+              Jelajahi <span>→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="card-hover group relative overflow-hidden rounded-3xl bg-clay-500 text-cream-100 aspect-[4/5] reveal" style="transition-delay:0.1s">
+          <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&q=80&auto=format&fit=crop" alt="Wet Food" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-55 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-clay-700 via-clay-700/40 to-transparent"></div>
+          <div class="relative p-6 h-full flex flex-col justify-end">
+            <div class="text-xs tracking-widest uppercase opacity-70 mb-1">Favorit Kucing</div>
+            <h3 class="font-serif text-3xl font-bold mb-1">Makanan Basah</h3>
+            <p class="text-sm opacity-80 mb-4">80+ varian rasa</p>
+            <div class="inline-flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
+              Jelajahi <span>→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="card-hover group relative overflow-hidden rounded-3xl bg-cream-300 aspect-[4/5] reveal" style="transition-delay:0.2s">
+          <img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=600&q=80&auto=format&fit=crop" alt="Snacks" class="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-cream-100 via-cream-100/30 to-transparent"></div>
+          <div class="relative p-6 h-full flex flex-col justify-end text-forest-800">
+            <div class="text-xs tracking-widest uppercase opacity-70 mb-1">Reward Time</div>
+            <h3 class="font-serif text-3xl font-bold mb-1">Snacks & Treats</h3>
+            <p class="text-sm opacity-70 mb-4">Untuk momen manja</p>
+            <div class="inline-flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
+              Jelajahi <span>→</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="#" class="card-hover group relative overflow-hidden rounded-3xl bg-forest-800 text-cream-100 aspect-[4/5] reveal" style="transition-delay:0.3s">
+          <img src="https://images.unsplash.com/photo-1607923432780-7a9c30adcb72?w=600&q=80&auto=format&fit=crop" alt="Vitamins" class="absolute inset-0 w-full h-full object-cover opacity-35 group-hover:opacity-50 group-hover:scale-110 transition-all duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-forest-900 via-forest-900/40 to-transparent"></div>
+          <div class="relative p-6 h-full flex flex-col justify-end">
+            <div class="text-xs tracking-widest uppercase opacity-70 mb-1">Kesehatan</div>
+            <h3 class="font-serif text-3xl font-bold mb-1">Obat & Vitamin</h3>
+            <p class="text-sm opacity-80 mb-4">Rekomendasi dokter hewan</p>
+            <div class="inline-flex items-center gap-2 text-sm font-semibold group-hover:gap-3 transition-all">
+              Jelajahi <span>→</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Secondary categories -->
+      <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+        <a href="#" class="card-hover bg-white/60 rounded-2xl p-4 text-center border border-forest-100 hover:border-forest-400">
+          <div class="text-3xl mb-2">🧴</div>
+          <div class="text-xs font-semibold text-ink-800">Grooming</div>
+        </a>
+        <a href="#" class="card-hover bg-white/60 rounded-2xl p-4 text-center border border-forest-100 hover:border-forest-400">
+          <div class="text-3xl mb-2">🎾</div>
+          <div class="text-xs font-semibold text-ink-800">Mainan</div>
+        </a>
+        <a href="#" class="card-hover bg-white/60 rounded-2xl p-4 text-center border border-forest-100 hover:border-forest-400">
+          <div class="text-3xl mb-2">🛏️</div>
+          <div class="text-xs font-semibold text-ink-800">Tempat Tidur</div>
+        </a>
+        <a href="#" class="card-hover bg-white/60 rounded-2xl p-4 text-center border border-forest-100 hover:border-forest-400">
+          <div class="text-3xl mb-2">🎒</div>
+          <div class="text-xs font-semibold text-ink-800">Pet Carrier</div>
+        </a>
+        <a href="#" class="card-hover bg-white/60 rounded-2xl p-4 text-center border border-forest-100 hover:border-forest-400">
+          <div class="text-3xl mb-2">👕</div>
+          <div class="text-xs font-semibold text-ink-800">Pakaian</div>
+        </a>
+        <a href="#" class="card-hover bg-white/60 rounded-2xl p-4 text-center border border-forest-100 hover:border-forest-400">
+          <div class="text-3xl mb-2">🚽</div>
+          <div class="text-xs font-semibold text-ink-800">Litter</div>
+        </a>
+        <a href="#" class="card-hover bg-white/60 rounded-2xl p-4 text-center border border-forest-100 hover:border-forest-400">
+          <div class="text-3xl mb-2">🐰</div>
+          <div class="text-xs font-semibold text-ink-800">Small Animal</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food Quiz -->
+  <section id="quiz" class="py-24 bg-forest-600 text-cream-100 relative overflow-hidden">
+    <div class="absolute inset-0 grain opacity-30"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 relative">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal">
+          <div class="text-xs tracking-[0.3em] uppercase text-clay-200 font-semibold mb-3">Rekomendasi Personal</div>
+          <h2 class="headline text-4xl sm:text-5xl font-bold mb-5">
+            Temukan makanan <br><span class="italic text-clay-200">tersempurna</span> untuk anabul Anda.
+          </h2>
+          <p class="opacity-85 text-lg mb-6 max-w-md leading-relaxed">
+            Jawab 3 pertanyaan singkat dan kami akan merekomendasikan produk yang paling cocok untuk sahabat berbulu Anda.
+          </p>
+          <ul class="space-y-2 text-sm opacity-85">
+            <li class="flex items-center gap-2">✓ Berdasarkan usia, ras, dan kondisi</li>
+            <li class="flex items-center gap-2">✓ Rekomendasi dari 60+ brand premium</li>
+            <li class="flex items-center gap-2">✓ Gratis konsultasi lanjutan via AI</li>
+          </ul>
+        </div>
+
+        <div x-data="foodQuiz()" class="bg-cream-100 text-ink-900 rounded-3xl shadow-2xl p-6 sm:p-8 reveal">
+          <!-- Progress -->
+          <div class="flex items-center gap-1.5 mb-6">
+            <template x-for="i in totalSteps">
+              <div class="flex-1 h-1.5 rounded-full transition-all"
+                   :class="i <= step ? 'bg-forest-600' : 'bg-cream-300'"></div>
+            </template>
+          </div>
+
+          <!-- Step 1: Pet type -->
+          <div x-show="step === 1" x-transition>
+            <div class="text-xs text-ink-500 mb-1">Langkah 1 dari 3</div>
+            <h3 class="font-serif text-2xl font-bold text-forest-800 mb-5">Anabul Anda...</h3>
+            <div class="grid grid-cols-2 gap-3">
+              <button @click="answer('type','dog'); next()" class="card-hover p-5 rounded-2xl border-2 border-cream-300 hover:border-forest-500 hover:bg-forest-50 text-left">
+                <div class="text-4xl mb-2">🐕</div>
+                <div class="font-semibold">Anjing</div>
+                <div class="text-xs text-ink-500 mt-1">Dog</div>
+              </button>
+              <button @click="answer('type','cat'); next()" class="card-hover p-5 rounded-2xl border-2 border-cream-300 hover:border-forest-500 hover:bg-forest-50 text-left">
+                <div class="text-4xl mb-2">🐈</div>
+                <div class="font-semibold">Kucing</div>
+                <div class="text-xs text-ink-500 mt-1">Cat</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Age -->
+          <div x-show="step === 2" x-transition>
+            <div class="text-xs text-ink-500 mb-1">Langkah 2 dari 3</div>
+            <h3 class="font-serif text-2xl font-bold text-forest-800 mb-5">Berapa usianya?</h3>
+            <div class="space-y-3">
+              <button @click="answer('age','puppy'); next()" class="card-hover w-full p-4 rounded-2xl border-2 border-cream-300 hover:border-forest-500 hover:bg-forest-50 text-left flex items-center gap-4">
+                <div class="text-3xl">🍼</div>
+                <div class="flex-1">
+                  <div class="font-semibold">Bayi (< 1 tahun)</div>
+                  <div class="text-xs text-ink-500">Puppy / Kitten</div>
+                </div>
+              </button>
+              <button @click="answer('age','adult'); next()" class="card-hover w-full p-4 rounded-2xl border-2 border-cream-300 hover:border-forest-500 hover:bg-forest-50 text-left flex items-center gap-4">
+                <div class="text-3xl">🌟</div>
+                <div class="flex-1">
+                  <div class="font-semibold">Dewasa (1 - 7 tahun)</div>
+                  <div class="text-xs text-ink-500">Adult</div>
+                </div>
+              </button>
+              <button @click="answer('age','senior'); next()" class="card-hover w-full p-4 rounded-2xl border-2 border-cream-300 hover:border-forest-500 hover:bg-forest-50 text-left flex items-center gap-4">
+                <div class="text-3xl">👑</div>
+                <div class="flex-1">
+                  <div class="font-semibold">Senior (7+ tahun)</div>
+                  <div class="text-xs text-ink-500">Golden years</div>
+                </div>
+              </button>
+            </div>
+            <button @click="prev()" class="mt-4 text-sm text-ink-500 hover:text-forest-600">← Kembali</button>
+          </div>
+
+          <!-- Step 3: Special needs -->
+          <div x-show="step === 3" x-transition>
+            <div class="text-xs text-ink-500 mb-1">Langkah 3 dari 3</div>
+            <h3 class="font-serif text-2xl font-bold text-forest-800 mb-5">Ada kebutuhan khusus?</h3>
+            <div class="space-y-3">
+              <button @click="answer('need','none'); next()" class="card-hover w-full p-4 rounded-2xl border-2 border-cream-300 hover:border-forest-500 hover:bg-forest-50 text-left">
+                <div class="font-semibold">Tidak ada, hanya cari yang berkualitas</div>
+                <div class="text-xs text-ink-500 mt-0.5">Nutrisi seimbang standar</div>
+              </button>
+              <button @click="answer('need','sensitive'); next()" class="card-hover w-full p-4 rounded-2xl border-2 border-cream-300 hover:border-forest-500 hover:bg-forest-50 text-left">
+                <div class="font-semibold">Perut sensitif / alergi</div>
+                <div class="text-xs text-ink-500 mt-0.5">Grain-free, single protein</div>
+              </button>
+              <button @click="answer('need','weight'); next()" class="card-hover w-full p-4 rounded-2xl border-2 border-cream-300 hover:border-forest-500 hover:bg-forest-50 text-left">
+                <div class="font-semibold">Manajemen berat badan</div>
+                <div class="text-xs text-ink-500 mt-0.5">Low fat, high fiber</div>
+              </button>
+              <button @click="answer('need','coat'); next()" class="card-hover w-full p-4 rounded-2xl border-2 border-cream-300 hover:border-forest-500 hover:bg-forest-50 text-left">
+                <div class="font-semibold">Bulu berkilau & kulit sehat</div>
+                <div class="text-xs text-ink-500 mt-0.5">Omega 3/6, salmon-based</div>
+              </button>
+            </div>
+            <button @click="prev()" class="mt-4 text-sm text-ink-500 hover:text-forest-600">← Kembali</button>
+          </div>
+
+          <!-- Result -->
+          <div x-show="step === 4" x-transition>
+            <div class="text-center mb-5">
+              <div class="text-4xl mb-2">✨</div>
+              <h3 class="font-serif text-2xl font-bold text-forest-800 mb-1">Rekomendasi Kami</h3>
+              <p class="text-sm text-ink-500">Untuk <b x-text="summary"></b></p>
+            </div>
+            <div class="space-y-3 mb-5">
+              <template x-for="p in recommendations" :key="p.name">
+                <div class="flex items-center gap-3 p-3 rounded-xl bg-cream-200/60">
+                  <div class="w-12 h-12 rounded-lg bg-forest-100 flex items-center justify-center text-2xl" x-text="p.icon"></div>
+                  <div class="flex-1 min-w-0">
+                    <div class="font-semibold text-sm truncate" x-text="p.name"></div>
+                    <div class="text-xs text-ink-500" x-text="p.brand + ' · ' + p.tag"></div>
+                  </div>
+                  <div class="text-sm font-bold text-forest-700" x-text="p.price"></div>
+                </div>
+              </template>
+            </div>
+            <div class="flex gap-2">
+              <button @click="askAI()" class="btn-clay flex-1 py-3 rounded-full text-sm font-semibold">Tanya AI lebih lanjut</button>
+              <button @click="restart()" class="btn-ghost px-4 py-3 rounded-full text-sm font-semibold">Ulangi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between mb-12 reveal">
+        <div>
+          <div class="text-xs tracking-[0.3em] uppercase text-clay-600 font-semibold mb-3">Best Seller Minggu Ini</div>
+          <h2 class="headline text-4xl sm:text-5xl font-bold text-forest-800">Produk Pilihan</h2>
+        </div>
+        <a href="#" class="hidden sm:inline-flex items-center gap-2 text-forest-600 font-semibold hover:gap-3 transition-all">
+          Lihat semua <span>→</span>
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Product 1 -->
+        <div class="card-hover bg-white rounded-3xl overflow-hidden border border-forest-100 reveal">
+          <div class="aspect-square bg-cream-200 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1585846416020-a70a4bd5c19a?w=500&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover" />
+            <span class="absolute top-3 left-3 bg-clay-500 text-cream-100 text-xs font-bold px-2.5 py-1 rounded-full">-15%</span>
+            <button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-cream-100/90 hover:bg-cream-100 flex items-center justify-center">🤍</button>
+          </div>
+          <div class="p-5">
+            <div class="text-xs text-clay-600 font-semibold mb-1">Pureluxe</div>
+            <h4 class="font-serif font-semibold text-forest-800 mb-1 leading-tight">Grain-Free Chicken & Sweet Potato</h4>
+            <p class="text-xs text-ink-500 mb-3">Dry Food · 5.4 kg · Anjing Dewasa</p>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="font-bold text-forest-700 text-lg">Rp 685.000</span>
+                <span class="text-xs text-ink-500 line-through ml-1">Rp 805.000</span>
+              </div>
+              <button class="btn-primary w-9 h-9 rounded-full text-sm">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card-hover bg-white rounded-3xl overflow-hidden border border-forest-100 reveal" style="transition-delay:0.1s">
+          <div class="aspect-square bg-cream-200 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1615751072497-5f5169febe17?w=500&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover" />
+            <span class="absolute top-3 left-3 bg-forest-600 text-cream-100 text-xs font-bold px-2.5 py-1 rounded-full">Best</span>
+            <button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-cream-100/90 hover:bg-cream-100 flex items-center justify-center">🤍</button>
+          </div>
+          <div class="p-5">
+            <div class="text-xs text-clay-600 font-semibold mb-1">Kit Cat</div>
+            <h4 class="font-serif font-semibold text-forest-800 mb-1 leading-tight">No Grain Tuna & Salmon</h4>
+            <p class="text-xs text-ink-500 mb-3">Wet Food · 24 x 80g · Kucing</p>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-forest-700 text-lg">Rp 420.000</span>
+              <button class="btn-primary w-9 h-9 rounded-full text-sm">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card-hover bg-white rounded-3xl overflow-hidden border border-forest-100 reveal" style="transition-delay:0.2s">
+          <div class="aspect-square bg-cream-200 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=500&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover" />
+            <span class="absolute top-3 left-3 bg-clay-500 text-cream-100 text-xs font-bold px-2.5 py-1 rounded-full">Baru</span>
+            <button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-cream-100/90 hover:bg-cream-100 flex items-center justify-center">🤍</button>
+          </div>
+          <div class="p-5">
+            <div class="text-xs text-clay-600 font-semibold mb-1">Monge</div>
+            <h4 class="font-serif font-semibold text-forest-800 mb-1 leading-tight">Natural Superpremium Adult</h4>
+            <p class="text-xs text-ink-500 mb-3">Dry Food · 3 kg · Kucing Dewasa</p>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-forest-700 text-lg">Rp 385.000</span>
+              <button class="btn-primary w-9 h-9 rounded-full text-sm">+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="card-hover bg-white rounded-3xl overflow-hidden border border-forest-100 reveal" style="transition-delay:0.3s">
+          <div class="aspect-square bg-cream-200 relative overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=500&q=80&auto=format&fit=crop" alt="" class="w-full h-full object-cover" />
+            <span class="absolute top-3 left-3 bg-forest-600 text-cream-100 text-xs font-bold px-2.5 py-1 rounded-full">Limited</span>
+            <button class="absolute top-3 right-3 w-9 h-9 rounded-full bg-cream-100/90 hover:bg-cream-100 flex items-center justify-center">🤍</button>
+          </div>
+          <div class="p-5">
+            <div class="text-xs text-clay-600 font-semibold mb-1">Doggyman</div>
+            <h4 class="font-serif font-semibold text-forest-800 mb-1 leading-tight">Chicken Jerky Sticks Premium</h4>
+            <p class="text-xs text-ink-500 mb-3">Snack · 500g · Anjing</p>
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-forest-700 text-lg">Rp 128.000</span>
+              <button class="btn-primary w-9 h-9 rounded-full text-sm">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section id="tentang" class="py-24 bg-cream-200/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="text-xs tracking-[0.3em] uppercase text-clay-600 font-semibold mb-3">Kenapa Pet Global ID</div>
+        <h2 class="headline text-4xl sm:text-5xl font-bold text-forest-800 mb-5">
+          Kami bukan sekadar <br><span class="italic gradient-text">toko hewan peliharaan.</span>
+        </h2>
+        <p class="text-ink-600 text-lg">Kami adalah komunitas pecinta hewan yang berkomitmen memberikan yang terbaik untuk anabul Anda — dengan produk, layanan, dan teknologi yang tak tertandingi.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-cream-100 rounded-3xl p-7 card-hover reveal">
+          <div class="w-14 h-14 rounded-2xl bg-forest-100 text-forest-700 flex items-center justify-center text-2xl mb-5">🌿</div>
+          <h3 class="font-serif text-xl font-bold text-forest-800 mb-2">Brand Kurasi Premium</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">60+ brand dunia dipilih dengan seleksi ketat. Hanya yang terbaik untuk anabul Anda.</p>
+        </div>
+        <div class="bg-cream-100 rounded-3xl p-7 card-hover reveal" style="transition-delay:0.1s">
+          <div class="w-14 h-14 rounded-2xl bg-clay-100 text-clay-700 flex items-center justify-center text-2xl mb-5">🚚</div>
+          <h3 class="font-serif text-xl font-bold text-forest-800 mb-2">Pengiriman Se-Indonesia</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">SiCepat, JNE, GrabExpress, GOSEND. Gratis ongkir untuk pembelian di atas Rp 100.000.</p>
+        </div>
+        <div class="bg-cream-100 rounded-3xl p-7 card-hover reveal" style="transition-delay:0.2s">
+          <div class="w-14 h-14 rounded-2xl bg-forest-100 text-forest-700 flex items-center justify-center text-2xl mb-5">💚</div>
+          <h3 class="font-serif text-xl font-bold text-forest-800 mb-2">Konsultasi Gratis</h3>
+          <p class="text-sm text-ink-600 leading-relaxed">Tim expert siap membantu memilih produk yang tepat via WhatsApp — kapan saja.</p>
+        </div>
+        <div class="bg-forest-600 text-cream-100 rounded-3xl p-7 card-hover reveal" style="transition-delay:0.3s">
+          <div class="w-14 h-14 rounded-2xl bg-cream-100/15 flex items-center justify-center text-2xl mb-5">🤖</div>
+          <h3 class="font-serif text-xl font-bold mb-2">AI Assistant 24/7</h3>
+          <p class="text-sm opacity-85 leading-relaxed">Poppy, AI pet expert kami, siap menjawab semua pertanyaan Anda tentang perawatan anabul.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+        <div class="text-xs tracking-[0.3em] uppercase text-clay-600 font-semibold mb-3">Cerita Pelanggan</div>
+        <h2 class="headline text-4xl sm:text-5xl font-bold text-forest-800">Dicintai pet parents Indonesia</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-cream-200/60 rounded-3xl p-7 card-hover reveal">
+          <div class="flex gap-1 text-clay-500 text-lg mb-4">★★★★★</div>
+          <p class="font-serif text-lg text-forest-800 leading-relaxed mb-6">"Konsultasinya cepat banget dan produknya berkualitas! Milo langsung suka Pureluxe salmonnya."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-forest-600 text-cream-100 flex items-center justify-center font-semibold">R</div>
+            <div>
+              <div class="font-semibold text-ink-900 text-sm">Rina Anggraini</div>
+              <div class="text-xs text-ink-500">Jakarta · Pet parent Milo 🐕</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-forest-600 text-cream-100 rounded-3xl p-7 card-hover reveal" style="transition-delay:0.1s">
+          <div class="flex gap-1 text-clay-200 text-lg mb-4">★★★★★</div>
+          <p class="font-serif text-lg leading-relaxed mb-6">"AI chatbotnya membantu banget waktu bingung pilih makanan buat Chubby yang alergi. Recommended!"</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-cream-100/20 flex items-center justify-center font-semibold">B</div>
+            <div>
+              <div class="font-semibold text-sm">Budi Santoso</div>
+              <div class="text-xs opacity-70">Surabaya · Pet parent Chubby 🐈</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-cream-200/60 rounded-3xl p-7 card-hover reveal" style="transition-delay:0.2s">
+          <div class="flex gap-1 text-clay-500 text-lg mb-4">★★★★★</div>
+          <p class="font-serif text-lg text-forest-800 leading-relaxed mb-6">"Pengirimannya cepat ke Bali, packing rapih. Sudah langganan setahun, gak kemana-mana lagi."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-11 h-11 rounded-full bg-clay-500 text-cream-100 flex items-center justify-center font-semibold">S</div>
+            <div>
+              <div class="font-semibold text-ink-900 text-sm">Sarah Wijaya</div>
+              <div class="text-xs text-ink-500">Denpasar · Pet parent Luna 🐕</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chatbot showcase section -->
+  <section id="chatbot" class="py-24 bg-gradient-to-br from-forest-800 to-forest-900 text-cream-100 relative overflow-hidden">
+    <div class="absolute inset-0 grain opacity-40"></div>
+    <div class="absolute top-20 -right-20 w-96 h-96 rounded-full bg-clay-500/10 blur-3xl"></div>
+    <div class="absolute bottom-20 -left-20 w-96 h-96 rounded-full bg-forest-400/10 blur-3xl"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 bg-cream-100/10 border border-cream-100/15 px-4 py-1.5 rounded-full text-xs font-semibold mb-6">
+            <span class="w-2 h-2 rounded-full bg-clay-400 animate-pulse"></span>
+            Bertenaga AI · Powered by DeepSeek
+          </div>
+          <h2 class="headline text-4xl sm:text-5xl font-bold mb-5">
+            Kenalkan <span class="italic text-clay-200">Poppy</span>,<br>AI Assistant kami.
+          </h2>
+          <p class="text-lg opacity-85 mb-6 max-w-lg leading-relaxed">
+            Punya pertanyaan tentang perawatan anabul? Bingung pilih makanan? Ingin tahu produk yang cocok? Poppy siap membantu 24/7 dengan pengetahuan mendalam tentang 60+ brand kami.
+          </p>
+
+          <div class="space-y-3 mb-8">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-clay-500/20 text-clay-200 flex items-center justify-center text-sm flex-shrink-0 mt-0.5">✓</div>
+              <div>
+                <div class="font-semibold text-sm">Rekomendasi produk personal</div>
+                <div class="text-xs opacity-70">Berdasarkan jenis, usia, dan kondisi hewan Anda</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-clay-500/20 text-clay-200 flex items-center justify-center text-sm flex-shrink-0 mt-0.5">✓</div>
+              <div>
+                <div class="font-semibold text-sm">Tips perawatan harian</div>
+                <div class="text-xs opacity-70">Diet, grooming, latihan, kesehatan</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-full bg-clay-500/20 text-clay-200 flex items-center justify-center text-sm flex-shrink-0 mt-0.5">✓</div>
+              <div>
+                <div class="font-semibold text-sm">Konsultasi dalam Bahasa Indonesia</div>
+                <div class="text-xs opacity-70">Hangat, ramah, seperti bicara dengan teman ahli</div>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-sm opacity-60">Coba tanya: <em>"Makanan untuk kucing Persia yang sensitif" atau "Cara merawat puppy Golden"</em></p>
+        </div>
+
+        <!-- Chat widget embedded -->
+        <div id="chat-embed" class="reveal"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / WhatsApp -->
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid md:grid-cols-2 gap-5">
+        <div class="bg-cream-200/60 rounded-3xl p-8 sm:p-10 relative overflow-hidden reveal">
+          <div class="absolute -top-6 -right-6 text-8xl opacity-10">💌</div>
+          <div class="relative">
+            <h3 class="font-serif text-3xl font-bold text-forest-800 mb-3">Newsletter untuk Pet Parents</h3>
+            <p class="text-ink-600 mb-6">Dapatkan tips perawatan mingguan + <b>diskon 10%</b> untuk pesanan pertama Anda.</p>
+            <form class="flex gap-2 flex-col sm:flex-row" onsubmit="event.preventDefault(); this.querySelector('button').innerText='✓ Terima kasih!';">
+              <input type="email" placeholder="Email Anda" required class="flex-1 px-5 py-3.5 rounded-full bg-cream-100 border border-forest-200/50 focus:border-forest-500 focus:outline-none text-sm" />
+              <button class="btn-primary px-6 py-3.5 rounded-full text-sm font-semibold whitespace-nowrap">Daftar Sekarang</button>
+            </form>
+          </div>
+        </div>
+
+        <a href="https://wa.me/6285186888233" target="_blank" rel="noopener" class="bg-forest-600 text-cream-100 rounded-3xl p-8 sm:p-10 relative overflow-hidden group card-hover reveal" style="transition-delay:0.1s">
+          <div class="absolute -top-6 -right-6 text-8xl opacity-10">💬</div>
+          <div class="relative">
+            <h3 class="font-serif text-3xl font-bold mb-3">Chat langsung via WhatsApp</h3>
+            <p class="opacity-85 mb-6">Butuh bantuan cepat atau ingin cek stok? Tim kami siap merespons dalam hitungan menit.</p>
+            <div class="inline-flex items-center gap-3 bg-cream-100/15 hover:bg-cream-100/20 px-5 py-3.5 rounded-full text-sm font-semibold transition">
+              +62 851-8688-8233
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-forest-800 text-cream-100 pt-20 pb-8 relative overflow-hidden">
+    <div class="absolute inset-0 grain opacity-30"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-10 mb-14">
+        <div class="lg:col-span-2">
+          <div class="flex items-center gap-2.5 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-cream-100 flex items-center justify-center text-xl">🐾</div>
+            <div>
+              <div class="font-serif font-bold text-xl">Pet Global ID</div>
+              <div class="text-[10px] tracking-wider opacity-70 uppercase">by WoofTroop</div>
+            </div>
+          </div>
+          <p class="text-sm opacity-75 mb-6 max-w-sm leading-relaxed">
+            Toko perlengkapan hewan peliharaan premium di Indonesia. Karena sahabat terbaik layak mendapat yang terbaik.
+          </p>
+
+          <div class="flex items-center gap-3">
+            <a href="https://www.instagram.com/wooftroop" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-cream-100/10 hover:bg-clay-500 flex items-center justify-center transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://wa.me/6285186888233" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-cream-100/10 hover:bg-clay-500 flex items-center justify-center transition">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.47-2.4-1.48-.89-.79-1.49-1.77-1.67-2.07-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.09 4.49.71.31 1.27.49 1.7.63.71.23 1.36.19 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12 22c-1.66 0-3.29-.42-4.72-1.22L2 22l1.29-4.9C2.44 15.6 2 13.83 2 12 2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="text-xs tracking-wider uppercase opacity-60 mb-4 font-semibold">Kategori</div>
+          <ul class="space-y-2.5 text-sm opacity-85">
+            <li><a href="#" class="hover:text-clay-200 transition">Makanan Kering</a></li>
+            <li><a href="#" class="hover:text-clay-200 transition">Makanan Basah</a></li>
+            <li><a href="#" class="hover:text-clay-200 transition">Snacks</a></li>
+            <li><a href="#" class="hover:text-clay-200 transition">Obat & Vitamin</a></li>
+            <li><a href="#" class="hover:text-clay-200 transition">Grooming</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="text-xs tracking-wider uppercase opacity-60 mb-4 font-semibold">Bantuan</div>
+          <ul class="space-y-2.5 text-sm opacity-85">
+            <li><a href="#" class="hover:text-clay-200 transition">Tentang Kami</a></li>
+            <li><a href="#" class="hover:text-clay-200 transition">Kebijakan Pengiriman</a></li>
+            <li><a href="#" class="hover:text-clay-200 transition">Kebijakan Refund</a></li>
+            <li><a href="#" class="hover:text-clay-200 transition">Kebijakan Privasi</a></li>
+            <li><a href="#" class="hover:text-clay-200 transition">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="text-xs tracking-wider uppercase opacity-60 mb-4 font-semibold">Kontak</div>
+          <ul class="space-y-2.5 text-sm opacity-85">
+            <li>WhatsApp: +62 851-8688-8233</li>
+            <li>Instagram: @wooftroop</li>
+            <li>Jakarta, Indonesia</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-cream-100/10 pt-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div class="text-xs opacity-60">© 2026 Pet Global ID — WoofTroop. Semua hak dilindungi.</div>
+          <div class="flex flex-wrap items-center gap-3 text-xs opacity-70">
+            <span class="uppercase tracking-wider text-[10px] opacity-60">Pembayaran:</span>
+            <span class="bg-cream-100/10 px-2.5 py-1 rounded">QRIS</span>
+            <span class="bg-cream-100/10 px-2.5 py-1 rounded">BCA</span>
+            <span class="bg-cream-100/10 px-2.5 py-1 rounded">Mandiri</span>
+            <span class="bg-cream-100/10 px-2.5 py-1 rounded">BNI</span>
+            <span class="bg-cream-100/10 px-2.5 py-1 rounded">AstraPay</span>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 text-xs opacity-70">
+            <span class="uppercase tracking-wider text-[10px] opacity-60">Pengiriman:</span>
+            <span class="bg-cream-100/10 px-2.5 py-1 rounded">SiCepat</span>
+            <span class="bg-cream-100/10 px-2.5 py-1 rounded">JNE</span>
+            <span class="bg-cream-100/10 px-2.5 py-1 rounded">GrabExpress</span>
+            <span class="bg-cream-100/10 px-2.5 py-1 rounded">GOSEND</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating chatbot button -->
+  <button
+    x-data
+    @click="$dispatch('open-chat')"
+    class="fixed bottom-6 right-6 z-50 group"
+    aria-label="Open chat">
+    <div class="absolute inset-0 rounded-full bg-clay-500 animate-pulse-ring"></div>
+    <div class="relative w-16 h-16 rounded-full btn-clay flex items-center justify-center text-2xl shadow-2xl">
+      💬
+    </div>
+    <div class="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-forest-800 text-cream-100 px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition">
+      Chat Poppy 👋
+    </div>
+  </button>
+
+  <!-- Chat modal (floating) -->
+  <div
+    x-data="chatWidget()"
+    @open-chat.window="open = true; $nextTick(() => scrollBottom())"
+    @keydown.escape.window="open = false"
+    x-show="open"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4"
+    style="display:none;">
+    <div @click="open = false" class="absolute inset-0 bg-forest-900/60 backdrop-blur-sm"></div>
+    <div class="relative w-full sm:max-w-md h-[85vh] sm:h-[640px] bg-cream-100 rounded-t-3xl sm:rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+      <!-- Header -->
+      <div class="bg-forest-600 text-cream-100 px-5 py-4 flex items-center gap-3">
+        <div class="relative">
+          <div class="w-11 h-11 rounded-full bg-cream-100 flex items-center justify-center text-2xl">🐾</div>
+          <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-400 border-2 border-forest-600"></span>
+        </div>
+        <div class="flex-1">
+          <div class="font-serif font-bold">Poppy</div>
+          <div class="text-xs opacity-80">AI Assistant · Online</div>
+        </div>
+        <button @click="open = false" class="w-8 h-8 rounded-full hover:bg-cream-100/15 flex items-center justify-center transition">✕</button>
+      </div>
+
+      <!-- Messages -->
+      <div id="chat-messages" class="chat-scroll flex-1 overflow-y-auto px-4 py-5 space-y-3" x-ref="messagesEl">
+        <template x-for="(m, i) in messages" :key="i">
+          <div :class="m.role === 'user' ? 'flex justify-end' : 'flex justify-start gap-2'">
+            <div x-show="m.role === 'assistant'" class="w-8 h-8 rounded-full bg-forest-600 text-cream-100 flex items-center justify-center text-sm flex-shrink-0">🐾</div>
+            <div
+              :class="m.role === 'user' ? 'bg-forest-600 text-cream-100 rounded-2xl rounded-br-sm px-4 py-2.5 max-w-[80%]' : 'bg-white text-ink-900 rounded-2xl rounded-bl-sm px-4 py-2.5 max-w-[80%] shadow-sm'">
+              <p class="text-sm leading-relaxed whitespace-pre-wrap" x-text="m.content"></p>
+            </div>
+          </div>
+        </template>
+
+        <div x-show="loading" class="flex justify-start gap-2">
+          <div class="w-8 h-8 rounded-full bg-forest-600 text-cream-100 flex items-center justify-center text-sm flex-shrink-0">🐾</div>
+          <div class="bg-white rounded-2xl rounded-bl-sm px-4 py-3 shadow-sm">
+            <span class="typing-dot"></span><span class="typing-dot"></span><span class="typing-dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Suggestions -->
+      <div x-show="messages.length <= 1" class="px-4 pb-2 flex gap-2 flex-wrap">
+        <template x-for="s in suggestions" :key="s">
+          <button @click="send(s)" class="text-xs bg-cream-200 hover:bg-cream-300 text-forest-700 px-3 py-1.5 rounded-full transition" x-text="s"></button>
+        </template>
+      </div>
+
+      <!-- Input -->
+      <div class="border-t border-cream-300 p-3 bg-cream-100">
+        <form @submit.prevent="send()" class="flex gap-2 items-center">
+          <input
+            x-model="input"
+            type="text"
+            placeholder="Tanya apa saja tentang anabul..."
+            class="flex-1 px-4 py-2.5 rounded-full bg-white border border-cream-300 focus:border-forest-500 focus:outline-none text-sm"
+            :disabled="loading" />
+          <button type="submit" :disabled="loading || !input.trim()" class="btn-primary w-11 h-11 rounded-full flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Embedded chat panel in chatbot section -->
+  <template id="embed-template">
+    <div class="bg-cream-100 rounded-3xl shadow-2xl overflow-hidden max-w-md mx-auto">
+      <div class="bg-forest-500 text-cream-100 px-5 py-4 flex items-center gap-3">
+        <div class="relative">
+          <div class="w-11 h-11 rounded-full bg-cream-100 flex items-center justify-center text-2xl">🐾</div>
+          <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-400 border-2 border-forest-500"></span>
+        </div>
+        <div class="flex-1">
+          <div class="font-serif font-bold">Poppy</div>
+          <div class="text-xs opacity-80">Klik ikon chat untuk mulai bicara</div>
+        </div>
+      </div>
+      <div class="p-5 space-y-3 min-h-[380px]">
+        <div class="flex gap-2">
+          <div class="w-8 h-8 rounded-full bg-forest-600 text-cream-100 flex items-center justify-center text-sm">🐾</div>
+          <div class="bg-white text-ink-900 rounded-2xl rounded-bl-sm px-4 py-2.5 max-w-[80%] shadow-sm">
+            <p class="text-sm leading-relaxed">Halo kak! 👋 Saya Poppy, AI Assistant Pet Global ID. Ada yang bisa saya bantu untuk anabul kesayangan Anda?</p>
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <div class="bg-forest-600 text-cream-100 rounded-2xl rounded-br-sm px-4 py-2.5 max-w-[80%]">
+            <p class="text-sm">Kucing Persia saya sering muntah bulu, ada rekomendasi?</p>
+          </div>
+        </div>
+        <div class="flex gap-2">
+          <div class="w-8 h-8 rounded-full bg-forest-600 text-cream-100 flex items-center justify-center text-sm">🐾</div>
+          <div class="bg-white text-ink-900 rounded-2xl rounded-bl-sm px-4 py-2.5 max-w-[80%] shadow-sm">
+            <p class="text-sm leading-relaxed">Wah, hairball memang umum untuk ras berbulu panjang seperti Persia! Saya sarankan makanan dengan formula <b>hairball control</b> — Monge Natural Superpremium punya varian khusus dengan serat tinggi yang membantu bulu keluar lewat pencernaan. Boleh saya bantu carikan?</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-cream-300 p-4 bg-cream-200/50">
+        <button onclick="window.dispatchEvent(new CustomEvent('open-chat'))" class="btn-clay w-full py-3 rounded-full text-sm font-semibold">
+          Mulai Chat Sekarang →
+        </button>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    // Insert embedded chat preview
+    document.getElementById('chat-embed').appendChild(
+      document.getElementById('embed-template').content.cloneNode(true)
+    );
+
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+    // Chat widget
+    function chatWidget() {
+      return {
+        open: false,
+        loading: false,
+        input: '',
+        messages: [
+          { role: 'assistant', content: 'Halo kak! 👋 Saya Poppy, AI Assistant Pet Global ID. Ada yang bisa saya bantu untuk anabul kesayangan Anda hari ini?' }
+        ],
+        suggestions: [
+          'Makanan terbaik untuk puppy Golden',
+          'Kucing Persia sering muntah bulu',
+          'Rekomendasi vitamin untuk anjing senior',
+          'Snack sehat untuk kucing gemuk'
+        ],
+        async send(text) {
+          const msg = (text || this.input).trim();
+          if (!msg || this.loading) return;
+          this.messages.push({ role: 'user', content: msg });
+          this.input = '';
+          this.loading = true;
+          this.$nextTick(() => this.scrollBottom());
+          try {
+            const res = await fetch('/api/chat', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ messages: this.messages })
+            });
+            const data = await res.json();
+            if (data.reply) {
+              this.messages.push({ role: 'assistant', content: data.reply });
+            } else {
+              this.messages.push({ role: 'assistant', content: 'Maaf kak, koneksi sedang bermasalah. Coba lagi ya, atau chat langsung via WhatsApp: wa.me/6285186888233' });
+            }
+          } catch (e) {
+            this.messages.push({ role: 'assistant', content: 'Maaf kak, ada kendala jaringan. Silakan chat via WhatsApp: wa.me/6285186888233' });
+          } finally {
+            this.loading = false;
+            this.$nextTick(() => this.scrollBottom());
+          }
+        },
+        scrollBottom() {
+          const el = this.$refs.messagesEl;
+          if (el) el.scrollTop = el.scrollHeight;
+        }
+      };
+    }
+
+    // Food quiz
+    function foodQuiz() {
+      return {
+        step: 1,
+        totalSteps: 3,
+        answers: {},
+        recommendations: [],
+        summary: '',
+        answer(k, v) { this.answers[k] = v; },
+        next() {
+          if (this.step < this.totalSteps) {
+            this.step++;
+          } else {
+            this.finish();
+          }
+        },
+        prev() { if (this.step > 1) this.step--; },
+        restart() { this.step = 1; this.answers = {}; this.recommendations = []; },
+        finish() {
+          const a = this.answers;
+          const isDog = a.type === 'dog';
+          const ageLabel = a.age === 'puppy' ? 'anabul muda' : a.age === 'senior' ? 'anabul senior' : 'anabul dewasa';
+          this.summary = `${isDog ? 'Anjing' : 'Kucing'} ${ageLabel}`;
+
+          const pool = {
+            dog: {
+              puppy: [
+                { name: '1st Choice Puppy Chicken', brand: '1st Choice', tag: 'Growth formula · 2.72 kg', price: 'Rp 385.000', icon: '🍗' },
+                { name: 'Pureluxe Puppy Grain-Free', brand: 'Pureluxe', tag: 'Premium · 5.4 kg', price: 'Rp 725.000', icon: '🌾' },
+                { name: 'Monge All Breeds Puppy', brand: 'Monge', tag: 'Superpremium · 3 kg', price: 'Rp 445.000', icon: '⭐' }
+              ],
+              adult: [
+                { name: 'Pureluxe Adult Chicken & Sweet Potato', brand: 'Pureluxe', tag: 'Grain-free · 5.4 kg', price: 'Rp 685.000', icon: '🍗' },
+                { name: 'Monge Natural Adult', brand: 'Monge', tag: 'Superpremium · 12 kg', price: 'Rp 1.185.000', icon: '⭐' },
+                { name: 'Doggyman Chicken Jerky', brand: 'Doggyman', tag: 'Snack · 500g', price: 'Rp 128.000', icon: '🥩' }
+              ],
+              senior: [
+                { name: 'Pureluxe Senior Salmon Recipe', brand: 'Pureluxe', tag: 'Joint support · 5.4 kg', price: 'Rp 715.000', icon: '🐟' },
+                { name: 'Monge Senior Chicken', brand: 'Monge', tag: 'Low-fat · 3 kg', price: 'Rp 485.000', icon: '⭐' },
+                { name: 'NexGard Joint Vitamin', brand: 'NexGard', tag: 'Vitamin · 60 tabs', price: 'Rp 385.000', icon: '💊' }
+              ]
+            },
+            cat: {
+              puppy: [
+                { name: 'Kit Cat No Grain Kitten', brand: 'Kit Cat', tag: 'Grain-free · 1.5 kg', price: 'Rp 285.000', icon: '🐟' },
+                { name: 'Monge Natural Kitten', brand: 'Monge', tag: 'Chicken · 1.5 kg', price: 'Rp 245.000', icon: '⭐' },
+                { name: 'Pureluxe Kitten Chicken', brand: 'Pureluxe', tag: 'Premium · 1.36 kg', price: 'Rp 325.000', icon: '🍗' }
+              ],
+              adult: [
+                { name: 'Kit Cat No Grain Tuna & Salmon', brand: 'Kit Cat', tag: 'Wet food · 24x80g', price: 'Rp 420.000', icon: '🐟' },
+                { name: 'Monge Natural Adult Sterilized', brand: 'Monge', tag: 'Sterilized · 3 kg', price: 'Rp 385.000', icon: '⭐' },
+                { name: 'Pureluxe Adult Salmon', brand: 'Pureluxe', tag: 'Grain-free · 1.36 kg', price: 'Rp 285.000', icon: '🍣' }
+              ],
+              senior: [
+                { name: 'Kit Cat Senior Fresh Salmon', brand: 'Kit Cat', tag: 'Senior · 1.5 kg', price: 'Rp 315.000', icon: '🐟' },
+                { name: 'Monge Senior Cat', brand: 'Monge', tag: 'Joint & kidney · 1.5 kg', price: 'Rp 295.000', icon: '⭐' },
+                { name: 'Oxbow Multivitamin', brand: 'Oxbow', tag: 'Vitamin · 60 tabs', price: 'Rp 225.000', icon: '💊' }
+              ]
+            }
+          };
+
+          this.recommendations = pool[a.type][a.age];
+
+          if (a.need === 'sensitive') {
+            this.recommendations[0] = { ...this.recommendations[0], tag: 'Hypoallergenic + ' + this.recommendations[0].tag };
+          }
+          this.step = 4;
+        },
+        askAI() {
+          window.dispatchEvent(new CustomEvent('open-chat'));
+          setTimeout(() => {
+            const question = `Halo, saya cari makanan untuk ${this.summary.toLowerCase()}${this.answers.need && this.answers.need !== 'none' ? ` dengan kebutuhan khusus ${this.answers.need === 'sensitive' ? 'perut sensitif/alergi' : this.answers.need === 'weight' ? 'manajemen berat badan' : 'bulu berkilau'}` : ''}. Bisa bantu rekomendasi?`;
+            window.dispatchEvent(new CustomEvent('quiz-question', { detail: question }));
+          }, 400);
+        }
+      };
+    }
+
+    // Bridge quiz question to chat
+    window.addEventListener('quiz-question', (e) => {
+      const modalRoot = document.querySelector('[x-data^="chatWidget"]');
+      if (modalRoot && modalRoot._x_dataStack) {
+        const state = modalRoot._x_dataStack[0];
+        state.send(e.detail);
+      }
+    });
+  </script>
+</body>
+</html>
