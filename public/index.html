@@ -1068,7 +1068,7 @@
   <!-- Chat modal (floating) -->
   <div
     x-data="chatWidget()"
-    @open-chat.window="open = true; $nextTick(() => scrollBottom())"
+    @open-chat.window="open = true; $nextTick(() => scrollBottom()); if ($event.detail && $event.detail.prompt) { setTimeout(() => send($event.detail.prompt), 400); }"
     @keydown.escape.window="open = false"
     x-show="open"
     x-transition:enter="transition ease-out duration-300"
