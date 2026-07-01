@@ -98,7 +98,7 @@ app.post('/api/chat', async (req, res) => {
 });
 
 app.get('/api/health', (_req, res) => {
-  res.json({ status: 'ok', model: DEEPSEEK_MODEL, hasKey: !!DEEPSEEK_API_KEY });
+  res.json({ status: 'ok', ready: !!DEEPSEEK_API_KEY });
 });
 
 app.listen(PORT, () => {
